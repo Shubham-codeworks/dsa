@@ -1,0 +1,57 @@
+### --- Python & Environments --- ###
+# Virtual environments (your specific 'env' folder)
+env/
+venv/
+.env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+### --- Deep Learning & Machine Learning --- ###
+# PyTorch models and weights (Prevents uploading huge .pth files)
+*.pth
+*.pt
+*.ckpt
+
+# Scikit-learn / Joblib models
+*.pkl
+*.joblib
+
+# Datasets (Add your .data/ directory here)
+.data/
+*.csv
+*.json
+*.xlsx
+*.parquet
+
+### --- Jupyter Notebooks --- ###
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Profiles and temporary files
+.ipython/
+
+### --- LaTeX (For your academic papers/slides) --- ###
+# This prevents your repo from being cluttered with LaTeX "trash" files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.pdf
+# (Note: Remove *.pdf if you actually want to share your compiled results)
+
+### --- Version Control & Editors --- ###
+# If you use VS Code or PyCharm occasionally
+.vscode/
+.idea/
+
+# Local configuration files
+.DS_Store
+.directory
