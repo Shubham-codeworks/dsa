@@ -1,9 +1,9 @@
 class Solution:
     def pattern9(self, n):
         for i in range(n):
-            for _ in range(n-1-i):
+            for _ in range(n-i-1):
                 print(" ", end="")
-            for _ in range(n-1-i, n+i):
+            for _ in range(n-i-1, n+i):
                 print("*", end="")
             print()
         for i in range(n,0,-1):
