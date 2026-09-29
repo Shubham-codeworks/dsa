@@ -1,7 +1,7 @@
 class QuickSort:
-    def lomuto(self, nums):
+    def lomuto_partition(self, nums):
         i, j = -1, 0 
-        l, h = 0, len(nums)-1
+        h = len(nums)-1
         pivot = nums[h]
 
         while j < h:
@@ -10,17 +10,14 @@ class QuickSort:
                 nums[i], nums[j] = nums[j], nums[i]
             j += 1
         nums[i+1], nums[h] = nums[h], nums[i+1]
-        left = nums[:i+1]
-        right = nums[i+2:]
-        return left, pivot, right
+        return nums[:i+1], pivot, nums[i+2:]
 
     def quick_sort(self, nums):
         if len(nums) <= 1:
             return nums
         
-        left, pivot, right = self.lomuto(nums)
-        nums = self.quick_sort(left) + [pivot] + self.quick_sort(right)
-        return nums
+        left, pivot, right = self.lomuto_partition(nums)
+        return self.quick_sort(left) + [pivot] + self.quick_sort(right)
 
 if __name__ == "__main__":
     obj = QuickSort()
