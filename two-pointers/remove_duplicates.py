@@ -1,6 +1,6 @@
 class TwoPointers:
     def remove_duplicates(self, nums: list[int]) -> int:
-        "In place manipulation for sorted array to remove dulicates."
+        "In place manipulation for sorted array to remove duplicates."
         i, j = 0, 1
 
         if not nums:
